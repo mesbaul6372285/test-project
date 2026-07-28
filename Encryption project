@@ -1,0 +1,41 @@
+import random
+import string
+
+char = " " + string.punctuation + string.digits + string.ascii_letters
+char = list(char)
+key = char.copy()
+
+random.shuffle(key)
+
+while True:
+    choice = input("1. Encrypt 2. Decrypt (type 1, 2, or 'q' to quit): ").lower()
+
+    if choice == 'q':
+        print("Exiting program.")
+        break
+    elif choice == '1':
+        # encrypt
+        ntext = input("Enter any text to encrypt : ")
+        entext = ""
+        for text_char_encrypt in ntext:
+            try:
+                index = char.index(text_char_encrypt)
+                entext += key[index]
+            except ValueError:
+                entext += text_char_encrypt # Handle characters not in 'char'
+        print(f"Original message : {ntext}")
+        print(f"Encrypted message : {entext}")
+    elif choice == '2':
+        # decrypt
+        encrypted_input = input("Enter any text to decrypt : ")
+        decrypted_output = ""
+        for text_char_decrypt in encrypted_input:
+            try:
+                index = key.index(text_char_decrypt)
+                decrypted_output += char[index]
+            except ValueError:
+                decrypted_output += text_char_decrypt # Handle characters not in 'key'
+        print(f"Encrypted message : {encrypted_input}")
+        print(f"Original message : {decrypted_output}")
+    else:
+        print("Invalid choice. Please enter '1', '2', or 'q'.")

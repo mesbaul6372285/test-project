@@ -1,0 +1,49 @@
+import time
+import datetime
+
+
+def setalarm(alarm_time_str):
+  print(f'Alarm set for {alarm_time_str}')
+
+
+
+show_time = datetime.datetime.now().strftime('%H:%M:%S')
+print(f"It is now {show_time} ")
+
+
+if __name__ == '__main__':
+    alarm_time_input = input('Enter the alarm time (HH:MM:SS): ')
+    setalarm(alarm_time_input)
+
+    isrunning = True
+    while isrunning:
+        current_time = datetime.datetime.now().strftime('%H:%M:%S')
+        print(f"Current time: {current_time}")
+
+        if current_time == alarm_time_input:
+          print("!!!!!!!!!!!!FUCK YOUR SLEEP AND WAKE UP!!!!!!!!!!!!")
+
+          isrunning = False
+
+        time.sleep(1)
+
+
+
+
+rate = 0.0
+
+while rate != 5.0:
+    
+        rate = float(input("Rate this project (1 to 5) "))
+        if rate == 1:
+            print("i made this project you fool give it 5 or i will cut you 3rd leg or cut the head of you cat")
+        elif rate == 2:
+            print("go and wash your face with toilet water")
+        elif rate == 3:
+            print("you can not able to hug")
+        elif rate == 4:
+            print("not good enough ")
+        elif rate == 5:
+            print("THANK YOU FOR SUPPORTING ME!")
+        else:
+            print("Please enter a rating between 1 and 5.")

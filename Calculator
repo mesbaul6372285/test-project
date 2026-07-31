@@ -1,0 +1,34 @@
+choose = input('Enter a choice (+, -, *, /, sum of any Arithmetic Series, sum of any Geometric Series )')
+if choose == '+':
+    a = int(input('a='))
+    b = int(input('b='))
+    print(a+b)
+
+elif choose == '-':
+    a = int(input('a='))
+    b = int(input('b='))
+    print(a-b)
+
+
+elif choose == '*':
+    a = int(input('a='))
+    b = int(input('b='))
+    print(a*b)  
+
+
+
+elif choose == '/':
+    a = int(input('a='))
+    b = int(input('b='))
+    print(a/b)
+
+
+elif choose == 'sum of any Arithmetic Series' :
+  print('a is 1st number, n is the number of the series, d is the difference ')
+  a = int(input('a='))
+  n = int(input('n='))
+  d = int(input('d='))
+  print((n/2) + (2*a(n-1)*d))
+
+else:
+  print("you stupid learn how to read then type qwe on laptop.")

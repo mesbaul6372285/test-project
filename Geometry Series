@@ -1,0 +1,22 @@
+print('This is a program that sum up any geometry series.')
+
+a = float(input("Enter 1st number(a)"))
+r = float(input("Enter ratio of the geometry series(r)"))
+n = float(input("How many numbers you need to sum up(n)"))
+
+
+
+op1 = (a*(r**n -1)/(r-1))
+
+op2 = (a*(1-r**n)/(1-r))
+
+
+if r>1 :
+  print(op1)
+
+elif r<1 and r>-1 :
+  print(round(op2, 6))
+
+
+else:
+  print('Learn how to read and then come you illiterate')

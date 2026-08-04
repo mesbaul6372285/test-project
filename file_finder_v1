@@ -1,0 +1,17 @@
+import os
+
+def find_file(searchp, tergetname):
+   for root, dirs, files in os.walk(searchp):
+    if tergetname in files:
+      return os.path.join(root, tergetname)
+    return  "file not found" 
+
+search_folder = input("enter folder name : ")  
+search_file = input("enter file name that you want to find : ")
+
+
+print(f" searching for {search_file} on {search_folder} folder ")
+
+file_loc = find_file(search_folder, search_file)
+print(f"result : {file_loc}")
+   

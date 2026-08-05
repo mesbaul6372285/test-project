@@ -1,0 +1,6 @@
+num = int(input("Enter a number : "))
+dif = int(input("Enter the difference : "))
+first_num = int(input("Enter the 1st number : "))
+
+result = first_num + (num - 1) * dif
+print(f'The number on {num} is {result}')
